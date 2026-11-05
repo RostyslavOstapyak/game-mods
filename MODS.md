@@ -16,3 +16,8 @@ tcc -shared -Wall -Werror -o BagCapacity10x.dll BagCapacity10x.c
 ```
 
 Place the output at `BagCapacity10x/Scripts/native/BagCapacity10x.dll` in the package. The build targets Crime Boss Steam build 25106786.
+
+## Landsraad Donation source for manual review
+
+[Browse the unpacked beta.5 package](LandsraadDonation-0.2.0-beta.5/LandsraadDonations).
+The inventory-reader installer is available as [PowerShell source](LandsraadDonation-0.2.0-beta.5/LandsraadDonations/Tools/Install-InventoryReader.ps1) and a [CMD launcher](LandsraadDonation-0.2.0-beta.5/LandsraadDonations/Tools/Install-InventoryReader.cmd).

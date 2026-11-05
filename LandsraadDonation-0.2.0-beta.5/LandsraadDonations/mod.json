@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "LandsraadDonations",
+  "name": "Landsraad Donations",
+  "version": "0.2.0-beta.5",
+  "author": "Landsraad Donation",
+  "description": "Singleplayer Landsraad donations: Solari, Melange and category gear donations with specialization XP.",
+  "type": "lua",
+  "requires": [
+    {
+      "id": "NBSCore",
+      "minVersion": "1.6.12",
+      "maxVersion": "1.6.12"
+    },
+    {
+      "id": "wps-launcher",
+      "minVersion": "2.1.0"
+    },
+    {
+      "id": "WPS_Framework",
+      "minVersion": "1.7.0"
+    },
+    {
+      "id": "ue4ss",
+      "minVersion": "3.0.1-1140-gf58e8f84",
+      "maxVersion": "3.0.1-1140-gf58e8f84"
+    }
+  ],
+  "game": {
+    "editions": [
+      {
+        "store": "steam",
+        "steamAppId": "1172710"
+      }
+    ]
+  }
+}

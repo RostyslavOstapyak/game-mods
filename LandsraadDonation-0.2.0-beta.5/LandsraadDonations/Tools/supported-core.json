@@ -1,0 +1,23 @@
+{
+  "profiles": [
+    {
+      "version": "1.6.7",
+      "cleanHashes": [
+        "89c388117c0143dfe9670b83154272dce164774e0490de70f383a9c30191d9d7"
+      ],
+      "patchedHashes": [
+        "c59bdd3c5c8b191214ba57fc946e8569df8818ca27b175caa44b66539d870ed7"
+      ]
+    },
+    {
+      "version": "1.6.12",
+      "cleanHashes": [
+        "89c388117c0143dfe9670b83154272dce164774e0490de70f383a9c30191d9d7"
+      ],
+      "patchedHashes": [
+        "c59bdd3c5c8b191214ba57fc946e8569df8818ca27b175caa44b66539d870ed7"
+      ],
+      "validation": "Installer profile based on official package text review only; no installer or gameplay test performed."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "file": "config.ini",
+  "format": "ini",
+  "fields": [
+    {
+      "key": "item_value_multiplier",
+      "type": "number",
+      "section": "donations",
+      "label": "Item base-value multiplier",
+      "description": "Game base value times this number, then converted to contribution. Default 1. Melange has a separate rate. Restart after changes.",
+      "group": "donations",
+      "min": 0.001,
+      "max": 1000000,
+      "step": 0.001
+    },
+    {
+      "key": "solari_per_melange",
+      "type": "integer",
+      "section": "donations",
+      "label": "Solari value per Melange",
+      "description": "Default 60000. Whole Melange units are spent; review actual contribution. Restart after changes.",
+      "group": "donations",
+      "min": 1,
+      "max": 1000000000,
+      "step": 1
+    },
+    {
+      "key": "solari_per_point",
+      "type": "integer",
+      "section": "donations",
+      "label": "Solari cost per contribution point",
+      "description": "Default 1000. Maximum 6000 contribution per transaction. Restart after changes.",
+      "group": "donations",
+      "min": 1,
+      "max": 1000000,
+      "step": 1
+    },
+    {
+      "key": "specialization_xp_enabled",
+      "type": "boolean",
+      "section": "donations",
+      "label": "Award specialization XP",
+      "description": "Award matching specialization XP after confirmed donations. No XP at maximum level. Restart after changes.",
+      "group": "donations"
+    },
+    {
+      "key": "specialization_xp_per_point",
+      "type": "number",
+      "section": "donations",
+      "label": "Specialization XP per contribution point",
+      "description": "Default 1. Fractional total XP is rounded down. Restart after changes.",
+      "group": "donations",
+      "min": 0,
+      "max": 1000,
+      "step": 0.1
+    }
+  ]
+}

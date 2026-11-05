@@ -1,0 +1,3 @@
+0.2.0-beta.5: E interacts only at the targeted Landsraad terminal without reserving the key across mods. Escape closes the Landsraad panel without opening the game pause menu. Donation logic and Core requirements unchanged.
+
+0.2.0-beta.4: Add an exact-checksum installer profile for official NBS Core 1.6.12 based on reading its main.lua/util.lua/native-call usage. No installer or gameplay tests run. Unknown versions/hashes remain refused. Public dependency targets exact Core 1.6.12; historical 1.6.7 profile retained. Gameplay/payment/UI logic unchanged from beta.3.

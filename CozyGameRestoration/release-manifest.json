@@ -1,0 +1,30 @@
+{
+  "version": "0.5.2",
+  "game": "Cozy Game Restoration",
+  "steam_app_id": 3581230,
+  "unity": "2022.3.62f3",
+  "bepinex": "5.4.23.6",
+  "default_language": "Ukrainian",
+  "additional_languages": [
+    "English"
+  ],
+  "automated_tests_run": false,
+  "game_launched_by_agent": false,
+  "files": [
+    {
+      "file": "CollectorOrders-0.5.2-Nexus.zip",
+      "bytes": 13204,
+      "sha256": "1C9CB94CD72822164E55B61BD856E6F4E68946D334802796DC32592B437FCF4A"
+    },
+    {
+      "file": "CozyTweaks-0.5.2-Nexus.zip",
+      "bytes": 37856,
+      "sha256": "F282104D66CC360F7DCD51D323E60969CC8FE5C6EFB268AED77283CD90E4AA0D"
+    },
+    {
+      "file": "CozyTweaks-0.5.2-Source.zip",
+      "bytes": 39296,
+      "sha256": "0E007C2D026F55D74B60D36E039B0B27C7B3FBCBCEB4997EC961E9287A83F356"
+    }
+  ]
+}

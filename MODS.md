@@ -19,3 +19,11 @@ Place the DLL at `BagCapacity10x/Scripts/native/BagCapacity10x.dll` in the packa
 
 [Browse the unpacked beta.5 package](DuneAwakening/LandsraadDonation/beta.5/LandsraadDonations).
 The inventory reader installer is available as [PowerShell source](DuneAwakening/LandsraadDonation/beta.5/LandsraadDonations/Tools/Install-InventoryReader.ps1) and a [CMD launcher](DuneAwakening/LandsraadDonation/beta.5/LandsraadDonations/Tools/Install-InventoryReader.cmd).
+
+## Cozy Game Restoration
+
+- [Cozy Tweaks 0.5.2](CozyGameRestoration/packages/CozyTweaks-0.5.2-Nexus.zip): animation speeds, tool shortcuts, inventory/shelf table and movable tool HUD.
+- [Collector Orders 0.5.2](CozyGameRestoration/packages/CollectorOrders-0.5.2-Nexus.zip): optional targeted dirty-game purchases; requires Cozy Tweaks 0.5.2+ and uses the same F10 menu.
+- [Source and build instructions](CozyGameRestoration/BUILD.md), [screenshots](CozyGameRestoration/screenshots), [Nexus descriptions](CozyGameRestoration/nexus).
+
+Public beta. Ukrainian default with English selectable in F10. No automated gameplay tests were run. Nexus publication is pending; no Nexus URL has been assigned here.

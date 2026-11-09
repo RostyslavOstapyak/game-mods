@@ -26,4 +26,5 @@ The inventory reader installer is available as [PowerShell source](DuneAwakening
 - [Collector Orders 0.5.2](CozyGameRestoration/packages/CollectorOrders-0.5.2-Nexus.zip): optional targeted dirty-game purchases; requires Cozy Tweaks 0.5.2+ and uses the same F10 menu.
 - [Source and build instructions](CozyGameRestoration/BUILD.md), [screenshots](CozyGameRestoration/screenshots), [Nexus descriptions](CozyGameRestoration/nexus).
 
-Public beta. Ukrainian default with English selectable in F10. No automated gameplay tests were run. Nexus publication is pending; no Nexus URL has been assigned here.
+Public beta. Ukrainian default with English selectable in F10. No automated gameplay tests were run. Nexus submissions: [Cozy Tweaks](https://www.nexusmods.com/mods/1?game_id=11007) and [Collector Orders](https://www.nexusmods.com/mods/2?game_id=11007). Both packages are uploaded and Publish completed; public visibility awaits approval of the new game entry.
+

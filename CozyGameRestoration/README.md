@@ -2,6 +2,10 @@
 
 Quality-of-life improvements for **Cozy Game Restoration**, with faster animations, custom tool shortcuts, a scrollable inventory and a movable tool-status indicator.
 
+[Nexus page](https://www.nexusmods.com/mods/1?game_id=11007) — submitted; public visibility awaits approval of the new game entry.
+
+![Cozy Tweaks promotional banner](artwork/CozyTweaks-banner.png)
+
 ## Install
 
 1. Close the game.
@@ -39,7 +43,7 @@ To uninstall, close the game and remove `CozyTweaks.dll`. Remove Collector Order
 
 ## Credits and disclosure
 
-Author: **RostyslavOstapyak**. Most code, mod UI, translations and release text were generated with **OpenAI Codex**, guided by the author's requirements and manual feedback. Use the Nexus **AI-Generated Content** classification and disclose AI-written listing text where requested. Screenshots are user-provided gameplay captures, not AI-generated images.
+Author: **RostyslavOstapyak**. Most code, mod UI, translations and release text were generated with **OpenAI Codex**, guided by the author's requirements and manual feedback. Use the Nexus **AI-Generated Content** classification and disclose AI-written listing text where requested. Screenshots are user-provided gameplay captures, not AI-generated images. Promotional covers/headers were generated with the built-in OpenAI image-generation tool and are disclosed as AI Media.
 
 Source is provided for inspection and rebuilding. No additional source-code licence is granted by this package. Game and third-party components remain owned by their respective owners.
 
@@ -51,3 +55,4 @@ User-provided screenshots. The inventory and shelf images show an earlier UI rev
 ![Shelf selection and genre bonus information](screenshots/02-shelf-selection.png)
 ![Cotton swab dirtiness indicator](screenshots/03-tool-status.png)
 ![Dark settings with English selected](screenshots/04-settings.png)
+

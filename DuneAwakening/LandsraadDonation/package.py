@@ -4,12 +4,18 @@ import json
 import zipfile
 
 root = Path(__file__).resolve().parent
-mod = root / 'work/LandsraadDonations'
+mod = root
 manifest = mod / 'MANIFEST-SHA256.json'
-files = sorted(p for p in mod.rglob('*') if p.is_file() and p != manifest)
+folders = ('Icons', 'Locales', 'NBS', 'Scripts', 'Tools', 'UI')
+root_files = ('CHANGELOG.txt', 'config.ini', 'mod.json', 'mod.settings.json', 'README-EN.md', 'settings.lua')
+files = sorted(
+    [mod / name for name in root_files]
+    + [p for folder in folders for p in (mod / folder).rglob('*') if p.is_file()]
+)
+version = json.loads((mod / 'mod.json').read_text(encoding='utf-8'))['version']
 hashes = {p.relative_to(mod).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 manifest.write_text(json.dumps(hashes, indent=2) + '\n', encoding='utf-8')
-archive = root / 'LandsraadDonation-0.2.0-beta.7-Nexus.zip'
+archive = root / f'LandsraadDonation-{version}-Nexus.zip'
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as out:
     for path in [*files, manifest]:
         out.write(path, 'LandsraadDonations/' + path.relative_to(mod).as_posix())

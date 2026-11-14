@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | Crime Boss: Rockay City | ObjectiveHighlight | [Package](CrimeBoss/ObjectiveHighlight) |
 | Crime Boss: Rockay City | BagCapacity10x | [Package and C source](CrimeBoss/BagCapacity10x) |
-| Dune: Awakening | Landsraad Donation | [Package and browsable beta.6 code](DuneAwakening/LandsraadDonation/beta.6/LandsraadDonations) |
+| Dune: Awakening | Landsraad Donation | [Package and browsable beta.7 code](DuneAwakening/LandsraadDonation/work/LandsraadDonations) |
 | Dune: Awakening | Endgame Overhaul | [Development builds](DuneAwakening/EndgameOverhaul) |
 
 | Cozy Game Restoration | Cozy Tweaks | [Code, screenshots and packages](CozyGameRestoration) |

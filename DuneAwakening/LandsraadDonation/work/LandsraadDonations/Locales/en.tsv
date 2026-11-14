@@ -1,0 +1,221 @@
+# UTF-8. key<TAB>text. Keep IDs and placeholders unchanged.
+msg.001	universal compactor
+msg.002	Could not read the donation journal. Donations are blocked pending review; the menu remains available.
+msg.003	Unfinished donation 
+msg.004	. New donations are blocked pending journal review. No automatic debits or refunds will occur.
+msg.005	Enter a whole number of points from 1 to 
+msg.006	This house does not accept this item.
+msg.007	Contribution must be between 1 and 6 000 points.
+msg.008	Not enough melange in your backpack.
+msg.009	Personal contribution is updating. Wait a few seconds and confirm again.
+msg.010	Could not save the donation state. Nothing was debited; check the journal.
+msg.011	The donation result requires review. Further donations are blocked, including after a restart.
+msg.012	Items removed.
+msg.013	Solari debited.
+msg.014	 Awaiting contribution confirmation…
+msg.015	Donation confirmed: %d %s → %d contribution points.
+msg.016	melange
+msg.017	compactor
+msg.018	items
+msg.019	Solari
+msg.020	 Specialization XP: +%d.
+msg.021	Contribution confirmed. Verifying specialization XP…
+msg.022	 Awaiting contribution (
+msg.023	 s). No need to confirm again.
+msg.024	A fresh exact backpack snapshot with a checksum is required.
+msg.025	Invalid item quantity.
+msg.026	A selected item disappeared.
+msg.027	Select between 1 and 64 entries.
+msg.028	Confirmation expired. Review your donation again.
+msg.029	Backpack changed during donation. Retry blocked.
+msg.030	Verifying item removal 
+msg.031	 of 
+msg.032	A selected item disappeared from your backpack.
+msg.033	Select items.
+msg.034	Select all backpack instances of this item type.
+msg.035	A partial stack can be donated only if it is the sole stack of this type in your backpack.
+msg.036	A donation can include at most 64 item types.
+msg.037	Confirmation expired. Refresh the list.
+msg.038	This item type is equipped. Unequip it or remove this type from the donation.
+msg.039	Item quantity changed. Refresh the list.
+msg.040	Items moved during donation.
+msg.041	Item
+msg.042	The melange quantity exceeds the game limit.
+msg.043	One whole melange at this rate exceeds the per-donation contribution limit.
+msg.044	WPS Economy not found
+msg.045	Economy settings unavailable
+msg.046	Valuation with custom multipliers is not available yet
+msg.047	Valuation with price overrides is not available yet
+msg.048	Economy catalog unavailable
+msg.049	Economy catalog exceeds the limit
+msg.050	Request unavailable; check the log.
+msg.051	Preparing catalog: 
+msg.052	Special request unavailable: 
+msg.053	Select a house and enter a donation.
+msg.054	Processing donation...
+msg.055	House or cycle changed. Checking refund.
+msg.056	Donation cancelled and Solari refunded.
+ui.001	\n\nAtreides: %s / %s\nHarkonnen: %s / %s
+ui.002	◆ Atreides
+ui.003	◆ Harkonnen
+ui.004	How it works
+ui.005	Influence begins with a contribution
+ui.006	Choose a house to make a donation. All houses accept Solari from your bank and spice melange from your backpack.
+ui.007	T5–T6 items by specialization
+ui.008	Crafting — materials and components\nGathering — ray cutters and compactors\nExploration — field equipment\nCombat — weapons, armor and ammunition\nSabotage — sniper rifles and blades
+ui.009	A special request grants double contribution. Any house may also request duraluminum or plastanium, regardless of specialization.
+ui.010	Captured houses remain available for personal contributions. Esc closes the menu.
+ui.011	Design preview
+ui.012	Close · Esc
+ui.013	This house is unavailable in the current cycle.
+ui.014	All houses
+ui.015	Selected house
+ui.016	Faction influence
+ui.017	Atreides
+ui.018	Harkonnen
+ui.019	Special request
+ui.020	Loading…
+ui.021	Double contribution for the requested item
+ui.022	Personal contribution
+ui.023	Contribution rewards
+ui.024	Make a donation
+ui.025	Solari · from bank
+ui.026	Melange · from backpack
+ui.027	How many points would you like?
+ui.028	Up to 6 000 per donation
+ui.029	contribution points
+ui.030	You will spend
+ui.031	Contribution
+ui.032	Specialization XP
+ui.033	Rate: 
+ui.034	 points per 1 
+ui.035	melange
+ui.036	Solari
+ui.037	Donate items ↗
+ui.038	Review donation
+ui.039	Not enough melange in your backpack.
+ui.040	Not enough Solari in your bank.
+ui.041	Confirm donation
+ui.042	Confirm: %s %s → %s contribution.
+ui.043	melange
+ui.044	Request unavailable; review required.
+ui.045	updating…
+ui.046	 · captured
+ui.047	Melange in backpack: 
+ui.048	Updating backpack…
+ui.049	Available in bank: 
+ui.050	 Solari
+ui.051	A donation is still processing. The list will refresh when it finishes.
+ui.052	Close the other game menu first.
+ui.053	 melange
+ui.054	 · insufficient balance
+ui.055	Disabled
+ui.056	House unavailable.
+ui.057	Back to donation
+ui.058	Refresh
+ui.059	House 
+ui.060	 · Donate items
+ui.061	Special request: 
+ui.062	 · double contribution
+ui.063	Your donation
+ui.064	Summary
+ui.065	Up to 6 000 points per donation. Special requests already include double contribution.
+ui.066	Select items
+ui.067	Loading catalog.
+ui.068	Could not load the catalog. Check the log.
+ui.069	Preparing catalog: 
+ui.070	%. Once per session.
+ui.071	Reading backpack items…
+ui.072	Could not read inventory: 
+ui.073	Individual backpack items. Equipment filtering is not verified; transfers are disabled.
+ui.074	Preview by item type. Equipment is not filtered; transfers are unavailable.
+ui.075	T5–T6 backpack items. Only selected instances and quantities will be transferred.
+ui.076	T5–T6 backpack items. Exact selection is unavailable; all instances of each type are required.
+ui.077	Preview by item type. Transfers unavailable.
+ui.078	If the list is empty, your backpack has no eligible items. The house accepts T5–T6 items in its category; equipped items are hidden.
+ui.079	Processing…
+ui.080	Units: 
+ui.081	\nSelected entries: 
+ui.082	 · hidden by search: 
+ui.083	\nXP disabled
+ui.084	\nXP: 0 (maximum level)
+ui.085	\nXP: level unavailable
+ui.086	Enter a whole quantity within the available amount.
+ui.087	Valuation is unavailable for some selected items.
+ui.088	Personal contribution\n+
+ui.089	 · exceeds the 6 000 limit
+ui.090	Last donation completed · transferred: 
+ui.091	 units · personal contribution: 
+ui.092	Granted: +
+ui.093	 contribution · +
+ui.094	Wait for the current operation to finish.
+ui.095	Select available items.
+ui.096	Checking selected items against the current backpack…
+ui.097	Selection changed. Review the new total.
+ui.098	A selected item disappeared.
+ui.099	Item changed. Refresh the list.
+ui.100	Item type changed.
+ui.101	Confirm: 
+ui.102	 items → 
+ui.103	 contribution. No Solari will be spent.
+ui.104	Refreshing personal contribution. Please wait; do not confirm again…
+ui.105	Selection changed; cancelled before any debit.
+ui.106	Character changed.
+ui.107	The Landsraad cycle changed.
+ui.108	Could not refresh contribution. No items were removed.
+ui.109	Select visible
+ui.110	Clear selection
+ui.111	Search backpack
+ui.112	Item
+ui.113	Quantity
+ui.114	Points / unit
+ui.115	T
+ui.116	 · Special request
+ui.117	 · House category
+ui.118	 · VALUE UNAVAILABLE
+ui.119	No eligible T5–T6 items in your backpack.
+ui.120	The house category and special request are shown. T4 and equipped items are hidden.
+ui.121	Request
+ui.122	Name
+ui.123	Value
+ui.124	Sort: 
+ui.125	Sort: Request
+ui.126	 · TRANSFERRED 
+ui.127	 · REMAINING 
+ui.128	Items removed: 
+ui.129	 units
+ui.130	Result requires review — retry blocked.
+ui.131	Contribution +
+ui.132	 confirmed · awaiting XP…
+ui.133	Awaiting confirmation of 
+ui.134	 contribution…
+ui.135	Crafting
+ui.136	Refined metals, auxiliary materials and components
+ui.137	Gathering
+ui.138	Ray cutters and compactors
+ui.139	Exploration
+ui.140	Stillsuits, suspensors, water and surveying equipment
+ui.141	Combat
+ui.142	Weapons, heavy and scout armor, and combat ammunition
+ui.143	Sabotage
+ui.144	Melee weapons and long dart rifles
+ui.145	Specialization is not available yet.
+ui.146	\nAccepts: 
+ui.147	 (T5–T6).\nAll houses accept Solari and melange.\nRequest: T6 or duraluminum/plastanium; double contribution.
+ui.148	[E] LANDSRAAD
+ui.149	Design preview · separate from the working menu
+ui.150	← Back to menu
+ui.151	House card
+ui.152	Alexin
+ui.153	Hover over the large card to compare its states.
+ui.154	Each house accepts its own item categories. Special requests grant double contribution.
+ui.155	Captured houses remain available for personal contributions.
+ui.156	This screen previews the design only. No donations or items are transferred here.
+ui.157	Design preview error; see the log.
+ui.158	Insufficient balance
+reward.claim	Claim rewards
+reward.unavailable	Available reward information is unavailable.
+reward.claim_all	Claim all
+reward.processing	Checking and claiming rewards…
+reward.confirmed	Rewards received.
+reward.unconfirmed	Claim could not be verified. Check your inventory and remaining rewards.

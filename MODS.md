@@ -2,7 +2,7 @@
 
 - [ObjectiveHighlight 0.5.1](CrimeBoss/ObjectiveHighlight/ObjectiveHighlight-0.5.1-Nexus.zip) · [Nexus](https://www.nexusmods.com/crimebossrockaycity/mods/73)
 - [BagCapacity10x 0.1.0-test](CrimeBoss/BagCapacity10x/BagCapacity10x-0.1.0-test-Nexus.zip) · [Nexus](https://www.nexusmods.com/crimebossrockaycity/mods/74)
-- [Landsraad Donation beta.6](DuneAwakening/LandsraadDonation/LandsraadDonation-0.2.0-beta.6-Nexus.zip) · [Nexus](https://www.nexusmods.com/duneawakening/mods/90)
+- [Landsraad Donation beta.7](DuneAwakening/LandsraadDonation/LandsraadDonation-0.2.0-beta.7-Nexus.zip) · [Nexus](https://www.nexusmods.com/duneawakening/mods/90)
 - [Endgame Overhaul](DuneAwakening/EndgameOverhaul) · development snapshots
 
 ## BagCapacity10x build
@@ -17,8 +17,8 @@ Place the DLL at `BagCapacity10x/Scripts/native/BagCapacity10x.dll` in the packa
 
 ## Landsraad Donation manual review
 
-[Browse the unpacked beta.6 package](DuneAwakening/LandsraadDonation/beta.6/LandsraadDonations).
-The inventory reader installer is available as [PowerShell source](DuneAwakening/LandsraadDonation/beta.6/LandsraadDonations/Tools/Install-InventoryReader.ps1) and a [CMD launcher](DuneAwakening/LandsraadDonation/beta.6/LandsraadDonations/Tools/Install-InventoryReader.cmd).
+[Browse the unpacked beta.7 package](DuneAwakening/LandsraadDonation/work/LandsraadDonations).
+The inventory reader installer is available as [PowerShell source](DuneAwakening/LandsraadDonation/work/LandsraadDonations/Tools/Install-InventoryReader.ps1) and a [CMD launcher](DuneAwakening/LandsraadDonation/work/LandsraadDonations/Tools/Install-InventoryReader.cmd).
 
 ## Cozy Game Restoration
 
@@ -28,3 +28,5 @@ The inventory reader installer is available as [PowerShell source](DuneAwakening
 
 Public beta. Ukrainian default with English selectable in F10. No automated gameplay tests were run. Nexus submissions: [Cozy Tweaks](https://www.nexusmods.com/mods/1?game_id=11007) and [Collector Orders](https://www.nexusmods.com/mods/2?game_id=11007). Both packages are uploaded and Publish completed; public visibility awaits approval of the new game entry.
 
+
+[Automated Landsraad Donation checks](DuneAwakening/LandsraadDonation/TESTING.md)

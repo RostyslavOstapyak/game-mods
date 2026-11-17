@@ -10,7 +10,7 @@ local function signature(name,args)
  for i,v in ipairs(args)do assert(actual[i]==v..' '..path..':'..(i==1 and(name=='AddSolarisToAccount'and'Quantity'or'SlotIndex')or'ProgressIncrease'),'Changed parameter: '..name)end
 end
 function M.new(app,settings,directory)
- local self={busy=false,message='Select a house and enter a donation.',settings=settings,supportsExactItems=true}
+ local self={busy=false,message='Select a house and enter a donation.',settings=settings}
  local guardOK,guard=pcall(function()return dofile(directory..'/Scripts/transaction_guard.lua').new(directory)end)
  if not guardOK then
   self.busy=true
@@ -156,13 +156,13 @@ function M.new(app,settings,directory)
   self:journal(id..' prepared house='..house..' term='..term..' cost='..cost..' points='..points..' balance='..b.balance..' personal_before='..before..' rate='..settings.solariPerContribution)
   if itemPayment then self:journal(id..' payment='..kind..' template='..itemPayment.template..' item_before='..itemBefore..' units='..cost..(kind=='melange'and(' solari_per_item='..settings.solariPerMelange)or(' entity='..itemPayment.offer.entity..' database='..itemPayment.offer.database..' slot='..itemPayment.offer.slot)))end
   if kind=='items'then for _,row in ipairs(itemPayment.identities)do
-   self:journal(id..' selected_item template='..row.template..' entity='..row.entity..' database='..row.database..' slot='..row.slot..' units='..row.count)
+   self:journal(id..' selected_item template='..row.template..' units='..row.count)
   end end
   if xp then self:journal(id..' xp_planned track='..xpTrack..' before='..xpBefore..' amount='..xpAmount..' rate='..settings.specializationXpPerPoint..' level='..xpLevel)end
   self.busy=true;self.message='Processing donation...'
   self.currentPayment={id=id,house=house,kind=kind,units=cost,points=points,stage='debit',keys={},quantities={}}
   if kind=='items'then for _,row in ipairs(itemPayment.identities)do
-   local key=row.entity..':'..row.database
+   local key=row.key
    self.currentPayment.keys[key]=true;self.currentPayment.quantities[key]=row.count
   end end
   local checkpointOK,checkpointError=pcall(function()guard:write(id,'begin')end)

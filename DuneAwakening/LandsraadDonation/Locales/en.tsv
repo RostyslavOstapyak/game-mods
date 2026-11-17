@@ -219,3 +219,5 @@ reward.claim_all	Claim all
 reward.processing	Checking and claiming rewards…
 reward.confirmed	Rewards received.
 reward.unconfirmed	Claim could not be verified. Check your inventory and remaining rewards.
+
+items.singletons	Only items with one copy on your character, in the backpack, can be donated.

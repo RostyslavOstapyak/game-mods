@@ -330,7 +330,7 @@ function M.new(app,donations,preferences)
  function self:itemsPage(id,page,cached)
   if donations.busy and donations.currentPayment and donations.currentPayment.stage~='review'then
    if self.notice then self.notice:SetText(FText(L.t('ui.051')))end
-   return -- Do not start a UI scan while the exact payment is using the inventory reader.
+   return -- Do not start a UI scan during a donation.
   end
   return dofile(DIR..'/items_view.lua').build(self,app,donations,requests,id,cached)
  end

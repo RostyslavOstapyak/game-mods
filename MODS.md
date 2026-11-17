@@ -18,7 +18,6 @@ Place the DLL at `BagCapacity10x/Scripts/native/BagCapacity10x.dll` in the packa
 ## Landsraad Donation manual review
 
 [Browse the current source](DuneAwakening/LandsraadDonation).
-The inventory reader installer is available as [PowerShell source](DuneAwakening/LandsraadDonation/Tools/Install-InventoryReader.ps1) and a [CMD launcher](DuneAwakening/LandsraadDonation/Tools/Install-InventoryReader.cmd).
 
 ## Cozy Game Restoration
 

@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "id": "LandsraadDonations",
   "name": "Landsraad Donations",
-  "version": "0.2.0-beta.7",
+  "version": "0.2.0-beta.8",
   "author": "Landsraad Donation",
   "description": "Singleplayer Landsraad donations: Solari, Melange and category gear donations with specialization XP.",
   "type": "lua",

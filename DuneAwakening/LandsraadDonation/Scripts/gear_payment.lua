@@ -1,49 +1,35 @@
--- Backpack-only template removal. Every instance of each selected template must be selected.
+-- Backpack-only removal of templates with exactly one eligible unit.
 -- This avoids claiming an entity-specific debit from a template-based native interface.
 local M={}
-local DIR=debug.getinfo(1,'S').source:sub(2):gsub('\\','/'):match('^(.*)/[^/]+$')
+
 local function valid(o)return o and o:IsValid()end
 local function template(id)
  assert(type(id)=='string'and id:match('^[%w_]+$'),'Invalid item template.')
  local name=FName(id,FNAME_Find);assert(name:ToString()==id,'Item template changed.')
  return{Name=name}
 end
-function M.plan(rows,selection,snapshot)
- if snapshot and snapshot.checksum and snapshot.checksumBusy==0 then return dofile(DIR..'/exact_gear_payment.lua').plan(snapshot,rows,selection)end
- local groups,keys,units={}, {},0
+function M.plan(rows,selection)
+ local selected,groups={},{}
  for _,row in ipairs(rows)do
-  assert(not keys[row.key],'Duplicate inventory identity.');keys[row.key]=true
-  if selection[row.key]then
-   assert(type(selection[row.key])=='number'and selection[row.key]%1==0 and selection[row.key]>0 and selection[row.key]<=row.count,'Некоректна кількість предметів.')
-   assert(row.entity and row.database and row.slot and row.inventory,'Exact item identity is unavailable.')
-   local id=row.item.id;groups[id]=groups[id]or{units=0,before=0,rows=0}
-   local group=groups[id];group.units=group.units+selection[row.key];group.before=group.before+row.count;group.rows=group.rows+1
-   units=units+selection[row.key]
+  if selection[row.key]~=nil then
+   local id=row.item.id
+   assert(row.key=='type:'..id and not selected[row.key] and row.count==1
+    and selection[row.key]==1,'Select one eligible item per template.')
+   selected[row.key]=true
+   groups[#groups+1]={template=id,units=1,before=1}
   end
  end
- for key in pairs(selection)do assert(keys[key],'Вибраний предмет зник із рюкзака.')end
- assert(units>0,'Виберіть предмети.')
- for _,row in ipairs(rows)do
-  assert(not groups[row.item.id]or selection[row.key],'Для цього типу потрібно вибрати всі його екземпляри в рюкзаку.')
- end
- local result={}
- for id,group in pairs(groups)do
-  assert(group.units==group.before or group.rows==1,'Частину стопки можна передати, якщо вона єдина цього типу в рюкзаку.')
-  result[#result+1]={template=id,units=group.units,before=group.before}
- end
- table.sort(result,function(a,b)return a.template<b.template end)
- assert(#result<=64,'За одну пожертву доступно не більше 64 типів предметів.')
- return result,units
+ for key in pairs(selection)do assert(selected[key],'Selected item is no longer eligible.')end
+ assert(#groups>0 and #groups<=64,'Select between 1 and 64 eligible items.')
+ table.sort(groups,function(a,b)return a.template<b.template end)
+ return groups,#groups
 end
 function M.new(backend,snapshot,rows,selection)
- if backend.supportsExactItems and snapshot and snapshot.checksum and snapshot.checksumBusy==0 then
-  return dofile(DIR..'/exact_gear_payment.lua').new(backend,snapshot,rows,selection)
- end
  local groups,units=M.plan(rows,selection)
  local created=os.time();local before=0;for _,group in ipairs(groups)do before=before+group.before end
  local payment={template='gear_batch',units=units,beforeUnits=before,groups=groups,identities={},offer={entity='batch',database='batch',slot='batch'}}
  for _,row in ipairs(rows)do if selection[row.key]then
-  payment.identities[#payment.identities+1]={template=row.item.id,entity=row.entity,database=row.database,slot=row.slot,count=selection[row.key]}
+  payment.identities[#payment.identities+1]={key=row.key,template=row.item.id,count=selection[row.key]}
  end end
  local function context()
   local s=backend:context()

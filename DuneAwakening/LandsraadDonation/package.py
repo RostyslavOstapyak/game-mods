@@ -6,7 +6,7 @@ import zipfile
 root = Path(__file__).resolve().parent
 mod = root
 manifest = mod / 'MANIFEST-SHA256.json'
-folders = ('Icons', 'Locales', 'NBS', 'Scripts', 'Tools', 'UI')
+folders = ('Icons', 'Locales', 'NBS', 'Scripts', 'UI')
 root_files = ('CHANGELOG.txt', 'config.ini', 'mod.json', 'mod.settings.json', 'README-EN.md', 'settings.lua')
 files = sorted(
     [mod / name for name in root_files]

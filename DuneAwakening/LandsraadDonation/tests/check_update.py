@@ -8,7 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 CHECKS = (
-    'board_progress', 'donation_receipt', 'exact_gear_payment', 'house_data',
+    'board_progress', 'donation_receipt', 'gear_payment', 'house_data',
     'inventory_model', 'item_quote', 'localization', 'melange_transactions',
     'transactions', 'reward_claim',
 )

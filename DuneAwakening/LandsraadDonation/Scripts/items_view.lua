@@ -69,12 +69,7 @@ function M.build(ui,app,backend,requests,id,cached)
   end)
   return
  end
- local exact=cached.mode=='instances'
- for _,entry in ipairs(cached)do entry.key=entry.key or('type:'..entry.item.id)end
- local equipmentWarning=exact and L.t('ui.073')or L.t('ui.074')
- local exactSelection=exact and backend.supportsExactItems and cached.snapshot and cached.snapshot.checksum and cached.snapshot.checksumBusy==0
- equipmentWarning=exactSelection and L.t('ui.075')or exact and L.t('ui.076')or L.t('ui.077')
- warning:SetText(FText(L.t('ui.078')))
+ warning:SetText(FText(L.t('items.singletons')))
  local priceError=nil
  local levelKnown,level=false,nil
  if backend.settings.specializationXpEnabled then levelKnown,level=pcall(function()return ui:specializationLevel(id)end)end
@@ -115,10 +110,10 @@ function M.build(ui,app,backend,requests,id,cached)
   end
   total=math.floor(total)
   self.candidateSelection=nil
-  if exact and types>0 and not invalid and not unknown and total>=1 and total<=6000 then
+  if types>0 and not invalid and not unknown and total>=1 and total<=6000 then
    local selected={}
    for _,entry in ipairs(self.rows)do if self.selection[entry.key]then selected[entry.key]=tonumber(stringOf(self.inputs[entry.key]:GetText()))end end
-   local ok,why=pcall(function()dofile(DIR..'/gear_payment.lua').plan(self.rows,selected,exactSelection and cached.snapshot or nil)end)
+   local ok,why=pcall(function()dofile(DIR..'/gear_payment.lua').plan(self.rows,selected)end)
    if ok then self.candidateSelection=selected;self.candidate=true
    else ui.notice:SetText(FText(display.error(why)))end
   end
@@ -151,8 +146,7 @@ function M.build(ui,app,backend,requests,id,cached)
   self.submitting=true;proceed:SetIsEnabled(false)
   local function readInventory()
   ui.notice:SetText(FText(L.t('ui.096')))
-  local catalog={};for _,item in ipairs(assert(requests:categoryItems(id)))do catalog[item.id]=item end
-  ui.itemScan=dofile(DIR..'/backpack_native.lua').scan(app,backend,catalog,function(rows,err,snapshot)
+  ui.itemScan=dofile(DIR..'/item_inventory.lua').scan(app,backend,assert(requests:categoryItems(id)),function(rows,err,snapshot)
    if ui.itemsView~=self or not ui.handle then return end
    self.submitting=false
    local ok,why=pcall(function()
@@ -161,7 +155,7 @@ function M.build(ui,app,backend,requests,id,cached)
     local fresh={};for _,row in ipairs(rows)do fresh[row.key]=row end
     for _,old in ipairs(self.rows)do if selected[old.key]then
      local current=assert(fresh[old.key],L.t('ui.098'))
-     for _,field in ipairs({'entity','database','slot','inventory','count'})do assert(current[field]==old[field],L.t('ui.099'))end
+     for _,field in ipairs({'count'})do assert(current[field]==old[field],L.t('ui.099'))end
      assert(current.item.id==old.item.id,L.t('ui.100'))
     end end
     local payment=dofile(DIR..'/gear_payment.lua').new(backend,snapshot,rows,selected)

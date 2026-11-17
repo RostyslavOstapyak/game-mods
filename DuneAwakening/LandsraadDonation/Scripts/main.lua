@@ -1,5 +1,5 @@
 local F=require('../../WPS_Framework/Scripts/api')
-local app=F.new{id='LandsraadDonations',version='0.2.0-beta.7'}
+local app=F.new{id='LandsraadDonations',version='0.2.0-beta.8'}
 local dir=debug.getinfo(1,'S').source:sub(2):gsub('\\','/'):match('^(.*)/[^/]+$')
 local function log(s)print('[LandsraadDonations] '..tostring(s)..'\n')end
 local settings=dofile(dir..'/../settings.lua')
